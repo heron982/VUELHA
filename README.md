@@ -17,7 +17,7 @@ $ git clone https://github.com/flhorizonte/VUELHA.git
 
 ## Authors
 
-* **Felipe Horizonte** - *Initial work* - [flhorizonte](https://github.com/flhorizonte)
+* **Felipe Horizonte** - [flhorizonte](https://github.com/flhorizonte)
 
 ## License
 
