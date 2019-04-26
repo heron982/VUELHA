@@ -16,7 +16,5 @@
     "url": "https://github.com/flhorizonte/VUELHA/issues"
   },
   "homepage": "https://github.com/flhorizonte/VUELHA#readme",
-  "dependencies": {
-    "vue": "^2.6.10"
-  }
+  "dependencies": {}
 }
