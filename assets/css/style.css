@@ -1,8 +1,6 @@
 * {margin:0;padding:0}
 
-.container {
-    margin: 15vh auto;
-}
+
 .table {
     width: 25vw;
 }
@@ -11,7 +9,19 @@
 }
 button {
     padding:30px;
+    background-color: #4eb54a;
+    border-style: none;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+
 }
+
+.title {
+    text-align: center;
+    margin: 5vh;
+    border: 10px #ffffff ;
+}
+
 .image {
     border-style: none;
     background-repeat: no-repeat;
