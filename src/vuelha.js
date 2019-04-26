@@ -1,4 +1,4 @@
-new Vue({
+const vuelha = new Vue({
     el: "#app",
     data: {
         //matriz 3x3

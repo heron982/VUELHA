@@ -1,0 +1,26 @@
+* {margin:0;padding:0}
+
+.container {
+    margin: 15vh auto;
+}
+.table {
+    width: 25vw;
+}
+.table td{
+    padding:50px;
+}
+button {
+    padding:30px;
+}
+.image {
+    border-style: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.x {
+    background-image: url('../img/x.jpg');
+}
+.o {
+    background-image: url('../img/o.jpg');
+}
