@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>VUELHA</title>
+    <style>
+        .container {
+            margin: 15vh auto;
+        }
+        .table {
+            width: 25vw;
+        }
+        .table td{
+            padding:50px;
+        }
+        button {
+            padding:30px;
+        }
+        .image {
+            border-style: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+        }
+        .x {
+            background-image: url('x.jpg');
+        }
+        .o {
+            background-image: url('o.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <table class="table table-bordered">
+                <tbody>
+                   <tr v-for="(array, linha) in button" :key="linha">
+                        <td v-for="(buttons, coluna) in array" :key="coluna">
+                            <button
+                            v-for="(button, index) in buttons" :key="index" 
+                            :class="{ 'image x' : button.status, 'image o' : !button.status }"
+                            @click="clicked(linha, coluna)"
+                            ></button>
+                        </td>
+                   </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
