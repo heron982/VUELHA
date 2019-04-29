@@ -28,7 +28,7 @@ const vuelha = new Vue({
         this.setTurn();
       }
       this.button[index][id].click++;
-      speaker();
+      this.speaker();
     },
 
     setTurn() {
