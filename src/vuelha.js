@@ -38,9 +38,7 @@ const vuelha = new Vue({
 
       this.whoWin(winner => {
         setTimeout(() => {
-          let rodada = confirm(
-            `${winner == 0 ? "Ninguém" : winner == 1 ? "X" : "O"} venceu!!`
-          );
+          let rodada = confirm(`${winner == 0 ? "Ninguém" : winner == 1 ? "X" : "O"} venceu!!`);
           if (rodada == true || false) window.location.reload();
         }, 500);
       });
