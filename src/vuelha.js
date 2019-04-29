@@ -1,4 +1,4 @@
-const vuelha = new Vue({
+const Vuelha = new Vue({
   el: "#app",
   data: {
     button: [
@@ -23,11 +23,11 @@ const vuelha = new Vue({
   },
   methods: {
     clicked(index, id) {
-      if (this.button[index][id].click < 1) {
-        this.button[index][id].status = this.turno == 1 ? true : false;
+      if (this.button.index.id.click < 1) {
+        this.button.index.id.status = this.turno == 1 ? true : false;
         this.setTurn();
       }
-      this.button[index][id].click++;
+      this.button.index.id.click++;
       this.speaker();
     },
 
