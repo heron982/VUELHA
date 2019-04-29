@@ -22,6 +22,7 @@ const vuelha = new Vue({
     jogadas: 0
   },
   methods: {
+
     clicked(index, id) {
       if (this.button[index][id][0].click < 1) {
         this.button[index][id][0].status = this.turno == 1 ? true : false;
@@ -35,12 +36,12 @@ const vuelha = new Vue({
       }
       this.button[index][id][0].click++;
 
-      this.whoWin(function(winner) {
+      this.whoWin(winner => {
         setTimeout(() => {
           let rodada = confirm(
             `${winner == 0 ? "Ninguém" : winner == 1 ? "X" : "O"} venceu!!`
           );
-          if (rodada == true) window.location.reload();
+          if (rodada == true || false) window.location.reload();
         }, 500);
       });
     },
@@ -101,9 +102,6 @@ const vuelha = new Vue({
         callback(0);
       }
     }
+
   },
-  mounted() {
-    //DEBUG matriz
-    console.log(this.button);
-  }
 });
