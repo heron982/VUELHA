@@ -1,7 +1,7 @@
 const Vuelha = new Vue({
   el: "#app",
   data: {
-    button: [
+    matriz: [
       [
         { status: Boolean, click: 0 },
         { status: Boolean, click: 0 },
@@ -23,11 +23,11 @@ const Vuelha = new Vue({
   },
   methods: {
     clicked(index, id) {
-      if (this.button.index.id.click < 1) {
-        this.button.index.id.status = this.turno == 1 ? true : false;
+      if (this.matriz.index.id.click < 1) {
+        this.matriz.index.id.status = this.turno == 1 ? true : false;
         this.setTurn();
       }
-      this.button.index.id.click++;
+      this.matriz.index.id.click++;
       this.speaker();
     },
 
@@ -53,54 +53,54 @@ const Vuelha = new Vue({
 
     whoWin(callback) {
       if (
-        (this.button[0][0].status == true &&
-          this.button[0][1].status == true &&
-          this.button[0][2].status == true) ||
-        (this.button[1][0].status == true &&
-          this.button[1][1].status == true &&
-          this.button[1][2].status == true) ||
-        (this.button[2][0].status == true &&
-          this.button[2][1].status == true &&
-          this.button[2][2].status == true) ||
-        (this.button[0][0].status == true &&
-          this.button[1][0].status == true &&
-          this.button[2][0].status == true) ||
-        (this.button[0][1].status == true &&
-          this.button[1][1].status == true &&
-          this.button[2][1].status == true) ||
-        (this.button[0][0].status == true &&
-          this.button[1][1].status == true &&
-          this.button[2][2].status == true) ||
-        (this.button[0][2].status == true &&
-          this.button[1][1].status == true &&
-          this.button[2][0].status == true)
+        (this.matriz[0][0].status == true &&
+          this.matriz[0][1].status == true &&
+          this.matriz[0][2].status == true) ||
+        (this.matriz[1][0].status == true &&
+          this.matriz[1][1].status == true &&
+          this.matriz[1][2].status == true) ||
+        (this.matriz[2][0].status == true &&
+          this.matriz[2][1].status == true &&
+          this.matriz[2][2].status == true) ||
+        (this.matriz[0][0].status == true &&
+          this.matriz[1][0].status == true &&
+          this.matriz[2][0].status == true) ||
+        (this.matriz[0][1].status == true &&
+          this.matriz[1][1].status == true &&
+          this.matriz[2][1].status == true) ||
+        (this.matriz[0][0].status == true &&
+          this.matriz[1][1].status == true &&
+          this.matriz[2][2].status == true) ||
+        (this.matriz[0][2].status == true &&
+          this.matriz[1][1].status == true &&
+          this.matriz[2][0].status == true)
       ) {
         callback(1);
       } else if (
-        (this.button[0][0].status == false &&
-          this.button[0][1].status == false &&
-          this.button[0][2].status == false) ||
-        (this.button[1][0].status == false &&
-          this.button[1][1].status == false &&
-          this.button[1][2].status == false) ||
-        (this.button[2][0].status == false &&
-          this.button[2][1].status == false &&
-          this.button[2][2].status == false) ||
-        (this.button[0][0].status == false &&
-          this.button[1][0].status == false &&
-          this.button[2][0].status == false) ||
-        (this.button[0][1].status == false &&
-          this.button[1][1].status == false &&
-          this.button[2][1].status == false) ||
-        (this.button[0][2].status == false &&
-          this.button[1][2].status == false &&
-          this.button[2][2].status == false) ||
-        (this.button[0][0].status == false &&
-          this.button[1][1].status == false &&
-          this.button[2][2].status == false) ||
-        (this.button[0][2].status == false &&
-          this.button[1][1].status == false &&
-          this.button[2][0].status == false)
+        (this.matriz[0][0].status == false &&
+          this.matriz[0][1].status == false &&
+          this.matriz[0][2].status == false) ||
+        (this.matriz[1][0].status == false &&
+          this.matriz[1][1].status == false &&
+          this.matriz[1][2].status == false) ||
+        (this.matriz[2][0].status == false &&
+          this.matriz[2][1].status == false &&
+          this.matriz[2][2].status == false) ||
+        (this.matriz[0][0].status == false &&
+          this.matriz[1][0].status == false &&
+          this.matriz[2][0].status == false) ||
+        (this.matriz[0][1].status == false &&
+          this.matriz[1][1].status == false &&
+          this.matriz[2][1].status == false) ||
+        (this.matriz[0][2].status == false &&
+          this.matriz[1][2].status == false &&
+          this.matriz[2][2].status == false) ||
+        (this.matriz[0][0].status == false &&
+          this.matriz[1][1].status == false &&
+          this.matriz[2][2].status == false) ||
+        (this.matriz[0][2].status == false &&
+          this.matriz[1][1].status == false &&
+          this.matriz[2][0].status == false)
       ) {
         callback(2);
       } else if (this.jogadas >= 8) {

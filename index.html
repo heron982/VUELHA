@@ -52,7 +52,7 @@
           <div class="col-sm">
             <table class="table table-bordered">
               <tbody>
-                <tr v-for="(array, linha) in button" :key="linha">
+                <tr v-for="(array, linha) in matriz" :key="linha">
                   <td v-for="(buttons, coluna) in array" :key="coluna">
                     <button
                       :class="{ 'image x' : buttons.status === true, 'image o' : buttons.status === false }"
