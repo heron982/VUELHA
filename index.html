@@ -1,76 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>VUELHA</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-
-                </div>
-                <div class="col-sm title">
-                    <p>v1.0.0.0-Alpha</p>
-                    <H1>VUELHA</H1>
-                    <h6>Jogo da velha feito em javascript com VUEJS</h6>
-                    <img style="margin:5px;width: 5vw;height: 10vh;"
-                        src="https://cdn-images-1.medium.com/max/1600/1*wqYF-8Dmh7LhtLkKfERc3Q.png">
-                </div>
-                <div class="col-sm">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-5">
-
-                </div>
-                <div class="col-sm-2" style="text-align:center">
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <p>Proximo a jogar:</p>
-                        </div>
-                        <div class="col-sm-2">
-                            <div style="height:25px;width:25px;" :class="{ 'image x' : turno == 1, 'image o' : turno == 2}"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm"></div>
-                <div class="col-sm">
-
-                    <table class="table table-bordered">
-                        <tbody>
-                            <tr v-for="(array, linha) in button" :key="linha">
-                                <td v-for="(buttons, coluna) in array" :key="coluna">
-                                    <button v-for="(button, index) in buttons" :key="index"
-                                        :class="{ 'image x' : button.status === true, 'image o' : button.status === false }"
-                                        @click="clicked(linha, coluna)"></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm"></div>
-            </div>
-
+      <div class="container">
+        <div class="row">
+          <div class="col-sm"></div>
+          <div class="col-sm title">
+            <p>v1.0.0.0-Alpha</p>
+            <H1>VUELHA</H1>
+            <h6>Jogo da velha feito em javascript com VUEJS</h6>
+            <img
+              style="margin:5px;width: 5vw;height: 10vh;"
+              src="https://cdn-images-1.medium.com/max/1600/1*wqYF-8Dmh7LhtLkKfERc3Q.png"
+            />
+          </div>
+          <div class="col-sm"></div>
         </div>
+        <div class="row">
+          <div class="col-sm-5"></div>
+          <div class="col-sm-2" style="text-align:center">
+            <div class="row">
+              <div class="col-sm-10">
+                <p>Proximo a jogar:</p>
+              </div>
+              <div class="col-sm-2">
+                <div
+                  style="height:25px;width:25px;"
+                  :class="{ 'image x' : turno == 1, 'image o' : turno == 2}"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm"></div>
+          <div class="col-sm">
+            <table class="table table-bordered">
+              <tbody>
+                <tr v-for="(array, linha) in button" :key="linha">
+                  <td v-for="(buttons, coluna) in array" :key="coluna">
+                    <button
+                      :class="{ 'image x' : buttons.status === true, 'image o' : buttons.status === false }"
+                      @click="clicked(linha, coluna)"
+                    ></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-sm"></div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./src/vuelha.js"></script>
-</body>
-
+  </body>
 </html>
