@@ -1,6 +1,4 @@
 * {margin:0;padding:0}
-
-
 .table {
     width: 25vw;
 }
@@ -13,15 +11,12 @@ button {
     border-style: none;
     border-radius: 100%;
     transition: all 0.3s ease;
-
 }
-
 .title {
     text-align: center;
     margin: 5vh;
     border: 10px #ffffff ;
 }
-
 .image {
     border-style: none;
     background-repeat: no-repeat;
