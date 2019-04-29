@@ -23,11 +23,11 @@ const Vuelha = new Vue({
   },
   methods: {
     clicked(index, id) {
-      if (this.matriz.index.id.click < 1) {
-        this.matriz.index.id.status = this.turno == 1 ? true : false;
+      if (this.matriz[index][id].click < 1) {
+        this.matriz[index][id].status = this.turno == 1 ? true : false;
         this.setTurn();
       }
-      this.matriz.index.id.click++;
+      this.matriz[index][id].click++;
       this.speaker();
     },
 
